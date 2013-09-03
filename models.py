@@ -165,7 +165,8 @@ TEXT_HS_ACTIVITY_CHOICES = (
 )
 
 INT_PAST_PHYSICS_CHOICES = (
-    ('6', "I've taken physics at U of M"),
+    ('7', "I've taken physics at U of M"),
+    ('6', "I've taken an online physics course at a different university"),
     ('5', "I've taken physics at a community college"),
     ('4', 'AP Physics C'),
     ('3', 'AP Physics B'),
