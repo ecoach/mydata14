@@ -7,7 +7,6 @@ from djangotailoring.models import SubjectData
 # Create your models here.
 
 # python ../manage.py makemtsmodel > MODEL.OUT (results go below here)
-# matches version 1734 of dictionary
 
 CTEXT_CLASS_STANDING_CHOICES = (
     ('Freshman', 'Freshman'),
@@ -98,6 +97,11 @@ INT_PAST_PHYSICS_EXPERIENCE_CHOICES = (
     ('2', 'Positive'),
     ('0', 'Neutral'),
     ('-2', 'Negative'),
+)
+
+OPT_OUT_CHOICES = (
+    ('0', 'Opt in'),
+    ('1', 'Opt out'),
 )
 
 CTEXT_GENDER_CHOICES = (
@@ -343,6 +347,11 @@ class Source1(SubjectData):
     # add meta property
     class Meta: 
         db_table = 'mydata_source1'
+    Reg_Enrolled = models.IntegerField(null=True, blank=True)
+    Reg_GPA = models.FloatField(null=True, blank=True)
+    Reg_Gender = models.CharField(max_length=5, null=True, blank=True)
+    Reg_Acad_Level = models.CharField(max_length=20, null=True, blank=True)
+    Signup_Opt_Out = models.IntegerField(null=True, blank=True)
     HS_Activity = models.CharField(max_length=7, choices=TEXT_HS_ACTIVITY_CHOICES, null=True, blank=True)
     HS_Activity_Other = models.CharField(max_length=20, null=True, blank=True)
     Movie = models.CharField(max_length=8, choices=TEXT_MOVIE_CHOICES, null=True, blank=True)
