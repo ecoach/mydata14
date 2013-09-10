@@ -37,7 +37,7 @@ URL_SUB = MPROJ_NAME + '/'
 
 MYDATA = 'mydata7'
 
-DATABASE_ROUTERS = ['mycoach.routers.CommonRouter']
+DATABASE_ROUTERS = ['mycoach.routers.UserRouter', 'mycoach.routers.CommonRouter']
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
