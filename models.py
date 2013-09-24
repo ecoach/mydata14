@@ -8,11 +8,42 @@ from djangotailoring.models import SubjectData
 
 # python ../manage.py makemtsmodel > MODEL.OUT (results go below here)
 
+INT_PROBLEMSOLVINGSTEPS_CHOICES = (
+    ('0', "I don't struggle with any of them."),
+    ('1', 'I struggle with correctly identifying the problem.'),
+    ('2', 'I struggle with figuring out what the most important pieces of information are in the problem.'),
+    ('3', "I struggle with finding examples that are similar to the paroblem that I'm working on."),
+    ('4', "I struggle with determining how the problem I'm working on differs from example problems."),
+    ('5', 'I struggle with determining which equation I should be using to solve the problem.'),
+    ('6', 'I struggle with using the equation correctly.'),
+    ('7', 'I struggle with effectively double-checking my solution.'),
+    ('99', 'I struggle with all the steps.'),
+)
+
+TEXT_SLC_INTEREST_CHOICES = (
+    ('Signed_Up', "Yes, I'm already signed up."),
+    ('Yes_Not_Signed_Up', 'Yes, but I have not signed up yet.'),
+    ('Not_Interested', "No, I'm not interested."),
+    ('IDK', "What's the Science Learning Center?"),
+)
+
 CTEXT_CLASS_STANDING_CHOICES = (
     ('Freshman', 'Freshman'),
     ('Sophomore', 'Sophomore'),
     ('Junior', 'Junior'),
     ('Senior', 'Senior'),
+)
+
+TEXT_PROBLEMTOPIC_140_CHOICES = (
+    ('none', "I don't struggle with any of them"),
+    ('vectors', 'vectors'),
+    ('straightline', 'straight line motion'),
+    ('2D', '2D and 3D motion'),
+    ('circular', 'circular motion'),
+    ('relative', 'relative motion'),
+    ('Newtonlaws', "Newton's laws"),
+    ('applyingnewton', "applying Newton's laws"),
+    ('everything', 'I struggle with everything'),
 )
 
 INT_GOAL_GRADE_CHOICES = (
@@ -24,6 +55,21 @@ INT_GOAL_GRADE_CHOICES = (
     ('3', 'C+'),
     ('2', 'C'),
     ('1', 'C- or below'),
+)
+
+TEXT_PTPREVIOUSSTUDY_CHOICES = (
+    ('none', "I haven't"),
+    ('lecturenotes', 'I have read over some of the lecture notes'),
+    ('lecturevideos', 'I have watched some of the lecture videos'),
+    ('readbook', 'I have read over some of the book'),
+    ('bookprobs', 'I have worked through some of the problems from the book'),
+    ('masteringphysics', 'I have reviewed and/or reworked some of the mastering physics problems'),
+    ('officehours', 'I have gone to office hours'),
+    ('physicshelproom', 'I have gone to the physics help room'),
+    ('studygroup', 'I have gone to a study group'),
+    ('problemroulette', 'I have used problem roulette'),
+    ('practiceexam', 'I have solved some of the problems from the practice exams'),
+    ('outsideresource', 'I have used resources outside of the course'),
 )
 
 INT_HS_MATH_CHOICES = (
@@ -38,6 +84,26 @@ INT_HS_MATH_CHOICES = (
     ('9', 'The equivalent of Math 215 (Calc 3: Multivariable Calculus) at a College/University'),
     ('10', 'The equivalent of Math 216 (Calc 4: Differential Equations) at a College/University'),
     ('0', 'Other'),
+)
+
+TEXT_PROBLEMTOPIC_235_CHOICES = (
+    ('none', "I don't struggle with any of them."),
+    ('coulombslaw', "Coulomb's Law"),
+    ('conductors', 'conductors'),
+    ('insulators', 'insulators'),
+    ('electricfield', 'electric fields'),
+    ('electricpotentialenergy', 'electric potential energy'),
+    ('electricpotential', 'electric potential'),
+    ('capacitors', 'capacitors and dielectrics'),
+    ('current', 'current and current density'),
+    ('resistance', 'resistance and resistivity'),
+    ('energypower', 'energy and power in circuits'),
+    ('parallelvsseries', 'resistors in series and parallel'),
+    ('Kirchoffsrules', "Kirchoff's rules"),
+    ('transientsincircuits', 'transients in circuits'),
+    ('RCtime', 'RC time'),
+    ('biological', 'biological applications'),
+    ('everything', 'I struggle with everything'),
 )
 
 INT_SAT_MATH_CHOICES = (
@@ -115,16 +181,23 @@ INT_ATTITUDE_MATH_CHOICES = (
     ('-2', 'no'),
 )
 
-INT_GOAL_GRADE_RESET_CHOICES = (
-    ('8', 'A'),
-    ('7', 'A-'),
-    ('6', 'B+'),
-    ('5', 'B'),
-    ('4', 'B-'),
-    ('3', 'C+'),
-    ('2', 'C'),
-    ('1', 'C- or below'),
-    ('0', 'No thanks'),
+TEXT_PROBLEMTOPIC_135_CHOICES = (
+    ('none', "I don't struggle with any of them"),
+    ('vectors', 'vectors'),
+    ('displacement', 'displacement'),
+    ('force', 'force'),
+    ('velocity', 'velocity'),
+    ('Newtonslaws', "Newton's Laws and Forces"),
+    ('friction', 'friction'),
+    ('freebodydiagram', 'free body diagram'),
+    ('tension', 'tension'),
+    ('forcetransmission', 'force transmission'),
+    ('simplemachines', 'simple machines'),
+    ('torque', 'torque'),
+    ('rotationalequil', 'rotational equilibrium'),
+    ('stressstrain', 'stress and strain'),
+    ('posvelacc', 'position, velocity, and acceleration'),
+    ('everything', 'I struggle with everything'),
 )
 
 CINT_SEMSESTERS_COMPLETED_CHOICES = (
@@ -278,11 +351,18 @@ CTEXT_INVOLVED_IN_CHOICES = (
     ('Other', 'Other Student Clubs/Organzations'),
 )
 
-TEXT_SLC_INTEREST_CHOICES = (
-    ('Signed_Up', "Yes, I'm already signed up."),
-    ('Yes_Not_Signed_Up', 'Yes, but I have not signed up yet.'),
-    ('Not_Interested', "No, I'm not interested."),
-    ('IDK', "What's the Science Learning Center?"),
+TEXT_PROBLEMTOPIC_240_CHOICES = (
+    ('none', "I don't struggle with any of them."),
+    ('coulombslaw', "Coulomb's Law"),
+    ('electricfield', 'electric fields'),
+    ('fieldlines', 'field lines and dipoles'),
+    ('fluxgauss', "flux and Gauss's law"),
+    ('applicationsGauss', "applications of Gauss's law"),
+    ('electricpotential', 'electric potential'),
+    ('capacitance', 'capacitance'),
+    ('fieldenergy', 'field energy and dielectrics'),
+    ('current', 'current and resistance'),
+    ('everything', 'I struggle with everything'),
 )
 
 INT_ATTITUDE_PHYSICS_EXP_CHOICES = (
@@ -340,6 +420,18 @@ INT_ATTITUDE_PHYSICS_NOEXP_CHOICES = (
     ('0', 'Since I have had no prior physics experience, I honestly do not know what to expect.'),
     ('2', 'I am confident in my ability to learn physics.'),
     ('4', 'I am very confident in my ability to learn physics.'),
+)
+
+INT_GOAL_GRADE_RESET_CHOICES = (
+    ('8', 'A'),
+    ('7', 'A-'),
+    ('6', 'B+'),
+    ('5', 'B'),
+    ('4', 'B-'),
+    ('3', 'C+'),
+    ('2', 'C'),
+    ('1', 'C- or below'),
+    ('0', 'No thanks'),
 )
 
 
@@ -409,6 +501,36 @@ class Source1(SubjectData):
     Reflection_PreExam3_2 = models.TextField(null=True, blank=True)
     Reflection_PreFinal_1 = models.TextField(null=True, blank=True)
     Reflection_PreFinal_2 = models.TextField(null=True, blank=True)
+    PT1_PreviousStudy__none = models.NullBooleanField()
+    PT1_PreviousStudy__lecturenotes = models.NullBooleanField()
+    PT1_PreviousStudy__lecturevideos = models.NullBooleanField()
+    PT1_PreviousStudy__readbook = models.NullBooleanField()
+    PT1_PreviousStudy__bookprobs = models.NullBooleanField()
+    PT1_PreviousStudy__masteringphysics = models.NullBooleanField()
+    PT1_PreviousStudy__officehours = models.NullBooleanField()
+    PT1_PreviousStudy__physicshelproom = models.NullBooleanField()
+    PT1_PreviousStudy__studygroup = models.NullBooleanField()
+    PT1_PreviousStudy__problemroulette = models.NullBooleanField()
+    PT1_PreviousStudy__practiceexam = models.NullBooleanField()
+    PT1_PreviousStudy__outsideresource = models.NullBooleanField()
+    PT1_ProbStruggle_135 = models.CharField(max_length=17, choices=TEXT_PROBLEMTOPIC_135_CHOICES, null=True, blank=True)
+    PT1_ProbStruggle_140 = models.CharField(max_length=14, choices=TEXT_PROBLEMTOPIC_140_CHOICES, null=True, blank=True)
+    PT1_ProbStruggle_235 = models.CharField(max_length=23, choices=TEXT_PROBLEMTOPIC_235_CHOICES, null=True, blank=True)
+    PT1_ProbStruggle_240 = models.CharField(max_length=17, choices=TEXT_PROBLEMTOPIC_240_CHOICES, null=True, blank=True)
+    PT1_ProbConfident_135 = models.CharField(max_length=17, choices=TEXT_PROBLEMTOPIC_135_CHOICES, null=True, blank=True)
+    PT1_ProbConfident_140 = models.CharField(max_length=14, choices=TEXT_PROBLEMTOPIC_140_CHOICES, null=True, blank=True)
+    PT1_ProbConfident_235 = models.CharField(max_length=23, choices=TEXT_PROBLEMTOPIC_235_CHOICES, null=True, blank=True)
+    PT1_ProbConfident_240 = models.CharField(max_length=17, choices=TEXT_PROBLEMTOPIC_240_CHOICES, null=True, blank=True)
+    PT1_ProbSolvingStep = models.IntegerField(null=True, blank=True)
+    PT1_ProbStruggleImprovedConf = models.IntegerField(null=True, blank=True)
+    PT1_ProbStruggle2_135 = models.CharField(max_length=17, choices=TEXT_PROBLEMTOPIC_135_CHOICES, null=True, blank=True)
+    PT1_ProbStruggle2_140 = models.CharField(max_length=14, choices=TEXT_PROBLEMTOPIC_140_CHOICES, null=True, blank=True)
+    PT1_ProbStruggle2_235 = models.CharField(max_length=23, choices=TEXT_PROBLEMTOPIC_235_CHOICES, null=True, blank=True)
+    PT1_ProbStruggle2_240 = models.CharField(max_length=17, choices=TEXT_PROBLEMTOPIC_240_CHOICES, null=True, blank=True)
+    PT1_ApplyingMath = models.IntegerField(null=True, blank=True)
+    PT1_ConceptualProbs = models.IntegerField(null=True, blank=True)
+    PT1_Notecard = models.IntegerField(null=True, blank=True)
+    PT1_Timelimit = models.IntegerField(null=True, blank=True)
     Writing_Prompt_1 = models.TextField(null=True, blank=True)
     Writing_Prompt_2 = models.TextField(null=True, blank=True)
     Writing_Prompt_3 = models.TextField(null=True, blank=True)
