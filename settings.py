@@ -185,6 +185,7 @@ INSTALLED_APPS = (
     'myloader',
     'myexporter',
     'mylogger',
+    'mytournament',
     'djangotailoring',
     'djangotailoring.surveys',
     'djangotailoring.tracking',
