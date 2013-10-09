@@ -279,6 +279,13 @@ TEXT_MOVIE_CHOICES = (
     ('none', 'I have not seen any of these movies'),
 )
 
+TEXT_PHYSICSHELPROOMREASON_CHOICES = (
+    ('OH', 'Office Hours'),
+    ('tutors', 'Help from the Physics Help Room staff (learning assistants, graduate students, etc)'),
+    ('teamwork', 'Work with others'),
+    ('other', 'Other'),
+)
+
 INT_CONFIDENCE_CHOICES = (
     ('4', 'Very confident'),
     ('3', 'Confident'),
@@ -469,6 +476,12 @@ class Source1(SubjectData):
     Partner = models.CharField(max_length=15, choices=TEXT_PARTNER_CHOICES, null=True, blank=True)
     Reason = models.CharField(max_length=17, choices=TEXT_REASON_CHOICES, null=True, blank=True)
     SLC_Interest = models.CharField(max_length=17, choices=TEXT_SLC_INTEREST_CHOICES, null=True, blank=True)
+    FCI_PreTest = models.FloatField(null=True, blank=True)
+    FCI_PostTest = models.FloatField(null=True, blank=True)
+    PreMathTest = models.FloatField(null=True, blank=True)
+    redo_exam1 = models.IntegerField(null=True, blank=True)
+    redo_exam2 = models.IntegerField(null=True, blank=True)
+    redo_exam3 = models.IntegerField(null=True, blank=True)
     Exam_1_Score = models.FloatField(null=True, blank=True)
     Exam_2_Score = models.FloatField(null=True, blank=True)
     Exam_3_Score = models.FloatField(null=True, blank=True)
@@ -540,6 +553,20 @@ class Source1(SubjectData):
     Writing_Prompt_7 = models.TextField(null=True, blank=True)
     Writing_Prompt_8 = models.TextField(null=True, blank=True)
     Writing_Prompt_9 = models.TextField(null=True, blank=True)
+    FeedbackExam1_ECoach_StudyHabits = models.IntegerField(null=True, blank=True)
+    FeedbackExam1_ECoach_ExamPrep = models.IntegerField(null=True, blank=True)
+    FeedbackExam1_ECoach_Helpful = models.TextField(null=True, blank=True)
+    FeedbackExam1_ECoach_Change = models.TextField(null=True, blank=True)
+    FeedbackExam1_StudyGroup_Attend = models.IntegerField(null=True, blank=True)
+    FeedbackExam1_StudyGroup_New = models.IntegerField(null=True, blank=True)
+    FeedbackExam1_StudyGroup_Helpful = models.TextField(null=True, blank=True)
+    FeedbackExam1_StudyGroup_Change = models.TextField(null=True, blank=True)
+    FeedbackExam1_PhysicsHelpRoom_Attend = models.IntegerField(null=True, blank=True)
+    FeedbackExam1_PhysicsHelpRoom_Reason = models.CharField(max_length=8, choices=TEXT_PHYSICSHELPROOMREASON_CHOICES, null=True, blank=True)
+    FeedbackExam1_PhysicsHelpRoom_Reason_Other = models.CharField(max_length=50, null=True, blank=True)
+    FeedbackExam1_PhysicsHelpRoom_Helpful = models.TextField(null=True, blank=True)
+    FeedbackExam1_PhysicsHelpRoom_Change = models.TextField(null=True, blank=True)
+    FeedbackExam1_PeerAdvice = models.TextField(null=True, blank=True)
     Writing_Prompt_10 = models.TextField(null=True, blank=True)
     Writing_Prompt_11 = models.TextField(null=True, blank=True)
     Writing_Prompt_12 = models.TextField(null=True, blank=True)
