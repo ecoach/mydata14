@@ -450,6 +450,7 @@ class Source1(SubjectData):
     Reg_GPA = models.FloatField(null=True, blank=True)
     Reg_Gender = models.CharField(max_length=5, null=True, blank=True)
     Reg_Acad_Level = models.CharField(max_length=20, null=True, blank=True)
+    Reg_Course = models.IntegerField(null=True, blank=True)
     Signup_Opt_Out = models.IntegerField(null=True, blank=True)
     HS_Activity = models.CharField(max_length=7, choices=TEXT_HS_ACTIVITY_CHOICES, null=True, blank=True)
     HS_Activity_Other = models.CharField(max_length=20, null=True, blank=True)
