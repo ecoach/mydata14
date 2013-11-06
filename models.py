@@ -578,6 +578,8 @@ class Source1(SubjectData):
     FeedbackExam1_PhysicsHelpRoom_Helpful = models.TextField(null=True, blank=True)
     FeedbackExam1_PhysicsHelpRoom_Change = models.TextField(null=True, blank=True)
     FeedbackExam1_PeerAdvice = models.TextField(null=True, blank=True)
+    FeedbackExam2_PeerAdvice = models.TextField(null=True, blank=True)
+    FeedbackExam3_PeerAdvice = models.TextField(null=True, blank=True)
     Writing_Prompt_10 = models.TextField(null=True, blank=True)
     Writing_Prompt_11 = models.TextField(null=True, blank=True)
     Writing_Prompt_12 = models.TextField(null=True, blank=True)
