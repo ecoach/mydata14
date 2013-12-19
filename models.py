@@ -491,6 +491,8 @@ class Source1(SubjectData):
     Exam_2_Score = models.FloatField(null=True, blank=True)
     Exam_3_Score = models.FloatField(null=True, blank=True)
     Exam_Final_Score = models.FloatField(null=True, blank=True)
+    Final_Course_Grade_Perc = models.FloatField(null=True, blank=True)
+    Final_Course_Grade_Letter = models.IntegerField(null=True, blank=True)
     MP_PreExam_1 = models.FloatField(null=True, blank=True)
     MP_PreExam_2 = models.FloatField(null=True, blank=True)
     MP_Time_PreExam_2 = models.FloatField(null=True, blank=True)
