@@ -1,8 +1,8 @@
 from django.conf.urls.defaults import patterns, include, url
 from .views import *
 from django.contrib.auth.decorators import login_required
-from django.views.generic.simple import redirect_to
-#from mycoach import urls
+#from django.views.generic.simple import redirect_to
+from django.views.generic import RedirectView
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -27,15 +27,16 @@ mts_patterns = patterns('',
     url(r'^tournament/',    include('mytournament.urls', namespace='tourney')),
 
     # message project
-    #url(r'^',               include('mycoach.urls', namespace='mycoach')),
     #url(r'^',               redirect_to, {'url': '/tournament/'})
-    url(r'^',               include('mytournament.urls', namespace='root')),
+    #url(r'^',               include('mycoach.urls', namespace='mycoach')),
 )
 
 urlpatterns = patterns('',
     url(r'^coach14/',          include(mts_patterns)),
     url(r'^coaches/',       include('myselector.urls', namespace='myselector')),
     #url(r'^',               redirect_to, {'url': '/coaches/'})
-    url(r'^',               redirect_to, {'url': '/coach14/'})
+    #url(r'^',               redirect_to, {'url': '/coach14/'})
+    url(r'^',               RedirectView.as_view(url='/coach14/')),
+
 )
 

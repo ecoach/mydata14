@@ -155,7 +155,7 @@ ROOT_URLCONF = DPROJ_NAME + '.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
 #WSGI_APPLICATION = 'transfer.wsgi.application'
-WSGI_APPLICATION = DIR_MYDATA + 'apache.django'
+#WSGI_APPLICATION = DIR_MYDATA + 'apache/django/apache.application'
  
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -171,6 +171,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admin',
     'south',
     'myauth',
     DPROJ_NAME,
@@ -222,7 +223,7 @@ if HOST == "PRODUCTION" or HOST == "DEVELOPMENT":
     )
 else:
     AUTHENTICATION_BACKENDS = (
-        'mycoach.backends.SettingsBackend',
+        'myauth.backends.SettingsBackend',
     )
 
 LOGIN_URL = '/coaches/login/'
