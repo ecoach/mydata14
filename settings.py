@@ -7,13 +7,12 @@ elif host == "ecoach3.lsa.umich.edu":
     HOST = "PRODUCTION"
 else:
     HOST = "LOCAL"
+    DEBUG = True
+    TEMPLATE_DEBUG = DEBUG
 
 # Django settings for ecoach project.
 import django.template
 django.template.add_to_builtins('django.templatetags.future')
-
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
 
 # globals
 DB_NAME    = 'ecoach14'
