@@ -177,13 +177,13 @@ INSTALLED_APPS = (
     'south',
     DPROJ_NAME,
     'myselector',
-    'mycoach',
-    'mypublisher',
-    'myusage',
-    'myemailer',
-    'nts',
-    'myloader',
-    'myexporter',
+    #'mycoach',
+    #'mypublisher',
+    #'myusage',
+    #'myemailer',
+    #'nts',
+    #'myloader',
+    #'myexporter',
     'mylogger',
     'mytournament',
     'djangotailoring',
@@ -232,14 +232,14 @@ LOGIN_URL = '/coaches/login/'
 
 LOGIN_REDIRECT_URL = '/coaches/'
 
-TAILORING2_PROJECT_ROOT = DIR_PROJ + DPROJ_NAME + '/' + MPROJ_NAME + '/'
+#TAILORING2_PROJECT_ROOT = DIR_PROJ + DPROJ_NAME + '/' + MPROJ_NAME + '/'
 
 #TAILORING2_PROJECT_CONFIG = DIR_PROJ + "tailoring2/config.py"
 #or
-TAILORING2_DICTIONARY = "mts.dictionary"
+#TAILORING2_DICTIONARY = "mts.dictionary"
 #and
-TAILORING2_CUSTOMIZATION_MODULE = 'Utilities/Tool Support/application.py'
+#TAILORING2_CUSTOMIZATION_MODULE = 'Utilities/Tool Support/application.py'
 
-TAILORING2_SUBJECT_LOADER_CLASS = DPROJ_NAME + '.subjects.ECoachSubjectLoader'
+#TAILORING2_SUBJECT_LOADER_CLASS = DPROJ_NAME + '.subjects.ECoachSubjectLoader'
 #TAILORING2_DEBUG
 

@@ -1,7 +1,8 @@
 import os, sys
 
 import site
-site.addsitedir('/home/jtritz/virtualenv/v1/lib/python2.6/site-packages')
+#site.addsitedir('/home/jtritz/virtualenv/v1/lib/python2.6/site-packages')
+site.addsitedir('/home/jtritz/virtualenv/v4/lib/python2.6/site-packages')
 
 from os.path import abspath, dirname, join
 SETTINGS_PATH = abspath(dirname(__file__))

@@ -13,25 +13,29 @@ mts_patterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # staff apps
-    url(r'^staff/',         include('mypublisher.urls', namespace='mystaff')),
-    url(r'^publisher/',     include('mypublisher.urls', namespace='mypublisher')),
-    url(r'^upload/',        include('myloader.urls', namespace='myloader')),
-    url(r'^export/',        include('myexporter.urls', namespace='myexporter')),
-    url(r'^nts/',           include('nts.urls', namespace='nts')),
-    url(r'^emailer/',       include('myemailer.urls', namespace='myemailer')),
+    url(r'^staff/',         include('mytournament.urls', namespace='mystaff')),
+    #url(r'^staff/',         include('mypublisher.urls', namespace='mystaff')),
+    #url(r'^publisher/',     include('mypublisher.urls', namespace='mypublisher')),
+    #url(r'^upload/',        include('myloader.urls', namespace='myloader')),
+    #url(r'^export/',        include('myexporter.urls', namespace='myexporter')),
+    #url(r'^nts/',           include('nts.urls', namespace='nts')),
+    #url(r'^emailer/',       include('myemailer.urls', namespace='myemailer')),
     #url(r'^copycat/',       include('mycopycat.urls', namespace='mycopycat')),
     #url(r'^curator/',       include('mycurator.urls', namespace='mycurator')),
-    url(r'^usage/',         include('myusage.urls', namespace='myusage')),
+    #url(r'^usage/',         include('myusage.urls', namespace='myusage')),
     url(r'^logger/',        include('mylogger.urls', namespace='mylogger')),
     url(r'^tournament/',    include('mytournament.urls', namespace='tourney')),
 
     # message project
-    url(r'^',               include('mycoach.urls', namespace='mycoach')),
+    #url(r'^',               include('mycoach.urls', namespace='mycoach')),
+    #url(r'^',               redirect_to, {'url': '/tournament/'})
+    url(r'^',               include('mytournament.urls', namespace='root')),
 )
 
 urlpatterns = patterns('',
     url(r'^coach14/',          include(mts_patterns)),
     url(r'^coaches/',       include('myselector.urls', namespace='myselector')),
-    url(r'^',               redirect_to, {'url': '/coaches/'})
+    #url(r'^',               redirect_to, {'url': '/coaches/'})
+    url(r'^',               redirect_to, {'url': '/coach14/'})
 )
 
