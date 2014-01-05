@@ -1,0 +1,104 @@
+{% extends 'new_base.html' %}   
+
+{% block title %}Coaching - {% endblock %}
+
+{% block head_extra %}
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {    
+        });
+    </script>
+{% endblock %}
+ 
+{% block side %}
+
+{% endblock%}
+
+
+{% block content %}
+<br>
+<br>
+<div id="message-content" class="row-fluid">
+    <div id="message-content" class="span1">
+    </div>
+    <div id="message-content" class="span6">
+    <br>
+    Hello! and welcome,
+    <br>
+    <br>
+    Tournaments are going to be used in Physics 405 this semester to evaluate various aspects of your work. As a participants in these tournaments you will be asked to submit your work and make comparisons of other students work.  All of the comparisons you make will be personally assigned to you by a computer program.
+    <br>
+    <br>
+    The basic idea is that through participation in this process you will see how others approach their work in physics and that thinking critically about their work will help you will learn more.  It will also make grading your hoemwork more efficient and improve the overall quality of grading.  All of the tournament results will be available online as the tournaments complete so reviewing the outcomes and using this information to your benefit will be up to you.
+    <br>
+    <br>
+    <a href=''>Take me to my first tournament!</a>
+    </div>
+
+    <div id="message-content" class="span4">
+        <center>
+        <h1>The only</h1>
+        <img class="img-polaroid" src="{{ STATIC_URL }}/mytournament/img/bracket.png"/>
+        <h2>thing that matters is <em><u>learning</u></em>!</h2>
+        (but winning does count for more)
+        </center>
+    </div>
+    <div id="message-content" class="span1">
+    </div>
+</div>
+
+<hr>
+
+<div id="message-content" class="row-fluid">
+
+
+    <div id="message-content" class="span1">
+    </div>
+
+<!-- Accordion starts -->
+    <div id="message-content" class="span8">
+    <h4>Aswers to other questions...</h4>
+    <br>
+        <div class="panel-group" id="accordion">
+
+<!-- Question starts -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                How do the tournament outcomes benefit my grade?
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+<!-- Question ends -->
+
+<!-- Question starts -->
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  What kind of algorithm does the computer use to assign bouts?
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body">
+                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              </div>
+            </div>
+          </div>
+<!-- Question ends -->
+
+        </div>
+    </div>
+<!-- Accordion ends -->
+
+
+</div>
+
+{% endblock %}
