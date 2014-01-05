@@ -1,7 +1,6 @@
 from django.conf.urls.defaults import patterns, include, url
 from .views import *
 from django.contrib.auth.decorators import login_required
-#from django.views.generic.simple import redirect_to
 from django.views.generic import RedirectView
 
 # Uncomment the next two lines to enable the admin:
@@ -19,7 +18,7 @@ mts_patterns = patterns('',
     #url(r'^upload/',        include('myloader.urls', namespace='myloader')),
     #url(r'^export/',        include('myexporter.urls', namespace='myexporter')),
     #url(r'^nts/',           include('nts.urls', namespace='nts')),
-    #url(r'^emailer/',       include('myemailer.urls', namespace='myemailer')),
+    url(r'^emailer/',       include('myemailer.urls', namespace='myemailer')),
     #url(r'^copycat/',       include('mycopycat.urls', namespace='mycopycat')),
     #url(r'^curator/',       include('mycurator.urls', namespace='mycurator')),
     #url(r'^usage/',         include('myusage.urls', namespace='myusage')),
@@ -28,11 +27,14 @@ mts_patterns = patterns('',
 
     # message project
     #url(r'^',               redirect_to, {'url': '/tournament/'})
+    url(r'^home/',          login_required(home_view), name='home'),
+    url(r'^',               login_required(home_view), name='default'),
     #url(r'^',               include('mycoach.urls', namespace='mycoach')),
 )
 
 urlpatterns = patterns('',
     url(r'^coach14/',          include(mts_patterns)),
+    #url(r'^coach14/',          include(mts_patterns), name='mydata'),
     url(r'^coaches/',       include('myselector.urls', namespace='myselector')),
     #url(r'^',               redirect_to, {'url': '/coaches/'})
     #url(r'^',               redirect_to, {'url': '/coach14/'})

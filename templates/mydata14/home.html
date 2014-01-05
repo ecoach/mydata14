@@ -1,4 +1,5 @@
 {% extends 'new_base.html' %}   
+{% load settings_to_template %}
 
 {% block title %}Coaching - {% endblock %}
 
@@ -28,18 +29,24 @@
     Tournaments are going to be used in Physics 405 this semester to evaluate various aspects of your work. As a participants in these tournaments you will be asked to submit your work and make comparisons of other students work.  All of the comparisons you make will be personally assigned to you by a computer program.
     <br>
     <br>
-    The basic idea is that through participation in this process you will see how others approach their work in physics and that thinking critically about their work will help you will learn more.  It will also make grading your hoemwork more efficient and improve the overall quality of grading.  All of the tournament results will be available online as the tournaments complete so reviewing the outcomes and using this information to your benefit will be up to you.
+    The basic idea is that through participation in this process you will see how others approach their work in physics and think critically about their work, which will help you will learn more.  It will also make grading your hoemwork more efficient and improve the overall quality of grading.  All of the tournament results will be available online as the tournaments complete so reviewing the outcomes and using this information to your benefit will be up to you.
     <br>
     <br>
-    <a href=''>Take me to my first tournament!</a>
+    Sincerely,
+    <br>
+    <br>
+    Your E<sup>2</sup>Coaches
+    <br>
+    <br>
+    <a href='' onclick="alert('Well, give us a minute to get it ready :)');">Take me to my first tournament!</a>
     </div>
 
     <div id="message-content" class="span4">
         <center>
         <h1>The only</h1>
-        <img class="img-polaroid" src="{{ STATIC_URL }}/mytournament/img/bracket.png"/>
+        <img class="img-polaroid" src="{{ STATIC_URL }}{% settings_value "DPROJ_NAME" %}/img/bracket.png"/>
         <h2>thing that matters is <em><u>learning</u></em>!</h2>
-        (but winning does count for more)
+        (but winning does get more points)
         </center>
     </div>
     <div id="message-content" class="span1">
@@ -65,7 +72,7 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-                How do the tournament outcomes benefit my grade?
+                How do the tournament outcomes effect my grade?
                 </a>
               </h4>
             </div>
@@ -82,7 +89,7 @@
             <div class="panel-heading">
               <h4 class="panel-title">
                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-                  What kind of algorithm does the computer use to assign bouts?
+                  How does the bout assignment and ordering algorithm work?
                 </a>
               </h4>
             </div>

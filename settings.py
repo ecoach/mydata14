@@ -110,7 +110,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    DIR_PROJ + '/' + DPROJ_NAME + '/' + MPROJ_NAME + '/Static',
+    #DIR_PROJ + '/' + DPROJ_NAME + '/' + MPROJ_NAME + '/Static',
     DIR_PROJ + 'static',
 )
 
@@ -179,6 +179,7 @@ INSTALLED_APPS = (
     'mycoach',
     'mylogger',
     'mytournament',
+    'myemailer',
     #'explorer',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
@@ -216,6 +217,7 @@ LOGGING = {
 }
 
 AUTH_USER_MODEL = 'myauth.UserProfile'
+#AUTH_PROFILE_MODULE = 'myauth.UserProfile'
 
 if HOST == "PRODUCTION" or HOST == "DEVELOPMENT":
     AUTHENTICATION_BACKENDS = (
