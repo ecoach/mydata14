@@ -8,7 +8,8 @@ DIR_PROJ = abspath(join(SETTINGS_PATH, '../../'))
 
 # ---------start old--------------
 
-sys.path.append(home_dir + "/virtualenv/v4/lib/python2.7/site-packages/")
+#sys.path.append(home_dir + "/virtualenv/v4/lib/python2.7/site-packages/")
+sys.path.append(home_dir + "/virtualenv/v4/lib/python2.6/site-packages/")
 sys.path.append(DIR_PROJ)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'mydata14.settings'
 
@@ -27,7 +28,7 @@ def application(environ, start_response):
 # ---------start new?--------------
 
 #import site
-#site.addsitedir(home_dir + "/virtualenv/v4/lib/python2.7/site-packages/")
+#sys.path.append(home_dir + "/virtualenv/v4/lib/python2.6/site-packages/")
 
 #site.addsitedir(DIR_PROJ)
 
