@@ -1,3 +1,7 @@
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning)
+warnings.filterwarnings("ignore", category=RuntimeWarning)
+
 import socket
 host = socket.gethostname()
 
@@ -25,6 +29,7 @@ DIR_NTS = DIR_PROJ + DPROJ_NAME + '/' + MPROJ_NAME + "/Static/mts/js/nts/"
 DIR_UPLOAD_DATA = DIR_PROJ + DPROJ_NAME + "/uploads/"
 DIR_DOWNLOAD_DATA = DIR_PROJ + DPROJ_NAME + "/downloads/"
 DIR_MYDATA = DIR_PROJ + DPROJ_NAME + '/'
+DIR_TOURNEY_PDF = DIR_UPLOAD_DATA + 'tourney_pdfs/'
 #DOMAIN = 'ecoach.lsa.umich.edu'
 DOMAIN = 'localhost'
 DOMAIN_COACH = '/' + COACH_URL + '/'
@@ -178,7 +183,7 @@ INSTALLED_APPS = (
     'myselector',
     'mycoach',
     'mylogger',
-    'mytournament',
+    'mytournament15',
     'myemailer',
     #'explorer',
     # Uncomment the next line to enable the admin:
