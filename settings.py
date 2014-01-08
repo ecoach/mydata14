@@ -18,7 +18,7 @@ else:
 DB_NAME    = 'ecoach14'
 DPROJ_NAME = 'mydata14'
 MPROJ_NAME = 'mts14'
-COACH_NAME = 'Physics 405: Winter 2014'
+COACH_NAME = 'Tournaments - Physics 405 Winter 2014'
 COACH_URL = 'coach14'
 COACH_EMAIL = 'ECoachHelpPhysics@umich.edu'
 
