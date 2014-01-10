@@ -29,6 +29,7 @@ mts_patterns = patterns('',
     #url(r'^usage/',         include('myusage.urls', namespace='myusage')),
     url(r'^logger/',        include('mylogger.urls', namespace='mylogger')),
     url(r'^tournament/',    include('mytournament15.urls', namespace='tourney')),
+    url(r'^download_mysql_db/', login_required(Download_Mysql_View), name='download_mysql'), # hack for now
 
     # message project
     #url(r'^',               redirect_to, {'url': '/tournament/'})
