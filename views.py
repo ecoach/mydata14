@@ -23,29 +23,4 @@ def home_view(request):
         #"steps_nav": steps_nav(request.user, 'run_checkout')
     })
 
-@staff_member_required
-def Download_Mysql_View(request):
-    import pdb; pdb.set_trace() 
-    import os, time
-    # if not admin don't do it
-    staffmember = request.user.is_staff
-    if not staffmember:
-        return redirect('/')
-
-    # send the results
-    try:
-        now = time.strftime('%Y-%m-%d-%H-%M-%S')         
-        file_name = settings.DB_NAME + "_" + now + ".sql"
-        file_path = settings.DIR_DOWNLOAD_DATA + "mysql/" + file_name
-        
-        os.system("mysqldump -u ecoach -pecoach " + settings.DB_NAME + " > " + file_path)
-
-        fsock = open(file_path,"rb")
-        response = HttpResponse(fsock, content_type='application/octet-stream')
-        response['Content-Disposition'] = 'attachment; filename=' + file_name            
-    except IOError:
-        response = HttpResponseNotFound("error creating backup database file")
-
-    return response
-
 
