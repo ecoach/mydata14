@@ -40,10 +40,7 @@ mts_patterns = patterns('',
 
 urlpatterns = patterns('',
     url(r'^coach14/',          include(mts_patterns)),
-    #url(r'^coach14/',          include(mts_patterns), name='mydata'),
     url(r'^coaches/',       include('myselector.urls', namespace='myselector')),
-    #url(r'^',               redirect_to, {'url': '/coaches/'})
-    #url(r'^',               redirect_to, {'url': '/coach14/'})
     url(r'^',               RedirectView.as_view(url='/coach14/')),
 
 )
