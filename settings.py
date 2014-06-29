@@ -37,8 +37,6 @@ URL_SUB = MPROJ_NAME + '/'
 
 MYDATA = 'mydata14'
 
-DATABASE_ROUTERS = ['mytailoring.routers.UserRouter', 'mytailoring.routers.CommonRouter']
-
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
