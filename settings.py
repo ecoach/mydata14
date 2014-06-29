@@ -183,7 +183,6 @@ INSTALLED_APPS = (
     'myselector',
     'mylogger',
     'mytournament15',
-    'myemailer',
     #'explorer',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
