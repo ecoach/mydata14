@@ -37,7 +37,7 @@ URL_SUB = MPROJ_NAME + '/'
 
 MYDATA = 'mydata14'
 
-DATABASE_ROUTERS = ['mycoach.routers.UserRouter', 'mycoach.routers.CommonRouter']
+DATABASE_ROUTERS = ['mytailoring.routers.UserRouter', 'mytailoring.routers.CommonRouter']
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -181,7 +181,6 @@ INSTALLED_APPS = (
     'myauth',
     DPROJ_NAME,
     'myselector',
-    'mycoach',
     'mylogger',
     'mytournament15',
     'myemailer',
